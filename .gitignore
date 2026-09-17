@@ -1,0 +1,16 @@
+.build/
+.swiftpm/
+DerivedData/
+*.xcuserstate
+*.swp
+*~
+.DS_Store
+
+# Virtualenv / Python
+__pycache__/
+*.py[cod]
+*$py.class
+dist/*.exe
+build/
+*.spec
+dist/
