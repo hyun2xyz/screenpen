@@ -1,7 +1,7 @@
 import AppKit
 
 final class HelpPanelWindow: NSPanel {
-    private let panelSize = NSSize(width: 340, height: 224)
+    private let panelSize = NSSize(width: 340, height: 248)
     private var dragStartMouseLocation: NSPoint?
     private var dragStartFrameOrigin: NSPoint?
     var onFrameChanged: (() -> Void)?
@@ -94,14 +94,14 @@ private final class HelpPanelView: NSView {
 
         drawText(
             "ScreenPen 단축키",
-            in: NSRect(x: 18, y: 188, width: 304, height: 22),
+            in: NSRect(x: 18, y: 212, width: 304, height: 22),
             font: .systemFont(ofSize: 15, weight: .semibold),
             color: .labelColor
         )
 
         let separator = NSBezierPath()
-        separator.move(to: NSPoint(x: 18, y: 180))
-        separator.line(to: NSPoint(x: 322, y: 180))
+        separator.move(to: NSPoint(x: 18, y: 204))
+        separator.line(to: NSPoint(x: 322, y: 204))
         NSColor.separatorColor.setStroke()
         separator.lineWidth = 1
         separator.stroke()
@@ -118,7 +118,7 @@ private final class HelpPanelView: NSView {
         ]
 
         for (index, row) in rows.enumerated() {
-            let y = 153 - CGFloat(index) * 19
+            let y = 177 - CGFloat(index) * 19
             drawText(
                 row.0,
                 in: NSRect(x: 18, y: y, width: 62, height: 17),
@@ -136,7 +136,7 @@ private final class HelpPanelView: NSView {
 
         drawText(
             "색상은 아래 도구 팔레트의 원을 누르면 바뀝니다.",
-            in: NSRect(x: 18, y: 8, width: 304, height: 17),
+            in: NSRect(x: 18, y: 12, width: 304, height: 17),
             font: .systemFont(ofSize: 10, weight: .regular),
             color: .tertiaryLabelColor
         )
